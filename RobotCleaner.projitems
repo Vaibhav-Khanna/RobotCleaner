@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{94694BE3-169D-49D1-AA19-BDE3C66CD28C}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>RobotCleaner</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)RobotCleaner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InputPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Networking.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\Material_ProgressBar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\MaterialEntry.xaml.cs">
+      <DependentUpon>MaterialEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BorderlessEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\Material_Button.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\Material_RippleTab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HomePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImageResponseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TakeImagePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\CameraPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OutputImagePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\ExtendedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FirstPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)CustomControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CustomControls\MaterialEntry.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
